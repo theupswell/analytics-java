@@ -5,6 +5,8 @@ import com.github.segmentio.models.Props;
 import com.github.segmentio.models.Traits;
 import com.github.segmentio.stats.AnalyticsStatistics;
 
+import java.io.IOException;
+
 public class Analytics {
   public final static String VERSION = "1.0.5";
 
@@ -374,18 +376,13 @@ public class Analytics {
   // Flush Actions
   //
 
-  /**
-   * Blocks until all messages in the queue are flushed.
-   */
-  public static void flush() {
-    checkInitialized();
-    defaultClient.flush();
-  }
+
 
   /**
    * Closes the threads associated with the client
    */
-  public static void close() {
+  public static void close() throws IOException
+  {
     checkInitialized();
     defaultClient.close();
   }

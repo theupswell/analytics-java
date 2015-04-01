@@ -7,7 +7,7 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.github.segmentio</groupId>
+  <groupId>com.theupswell.segmentio</groupId>
   <artifactId>analytics</artifactId>
   <description>The analytics API you've always wanted.</description>
   <!--  IMPORTANT: DON'T FORGET TO UPDATE Analytics.VERSION EVERYTIME !!! -->
@@ -15,12 +15,12 @@
   <packaging>jar</packaging>
 
   <name>analytics</name>
-  <url>https://github.com/segmentio/analytics-java/tree/master</url>
+  <url>https://github.com/theupswell/analytics-java/tree/master</url>
 
    <scm>
-    <connection>scm:git:https://github.com/segmentio/analytics-java.git</connection>
-    <developerConnection>scm:git:https://github.com/segmentio/analytics-java.git</developerConnection>
-    <url>https://github.com/segmentio/analytics-java.git</url>
+    <connection>scm:git:https://github.com/theupswell/analytics-java.git</connection>
+    <developerConnection>scm:git:https://github.com/theupswell/analytics-java.git</developerConnection>
+    <url>https://github.com/theupswell/analytics-java.git</url>
    </scm>
 
  <distributionManagement>
@@ -39,9 +39,9 @@
     </license>
   </licenses>
 
-  <properties> 
+  <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties> 
+  </properties>
 
   <developers>
     <developer>
@@ -57,36 +57,24 @@
 		<artifactId>commons-lang3</artifactId>
 		<version>3.3</version>
 	</dependency>
-    
+
     <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>18.0</version>
     </dependency>
 
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>1.7.5</version>
-	</dependency>
-    
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>1.7.5</version>
-        <scope>test</scope>
-    </dependency>
 
 	<dependency>
 		<groupId>joda-time</groupId>
 		<artifactId>joda-time</artifactId>
 		<version>2.1</version>
 	</dependency>
-	
+
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
-        <version>4.3.5</version>
+        <version>4.3.6</version>
     </dependency>
 
 	<dependency>
@@ -101,7 +89,7 @@
       <version>4.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+
     <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-all</artifactId>
@@ -116,8 +104,33 @@
         <scope>test</scope>
     </dependency>
 
+    <dependency>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-api-1.0-sdk</artifactId>
+        <version>1.9.17</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-api-labs</artifactId>
+        <version>1.9.17</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-api-stubs</artifactId>
+        <version>1.9.17</version>
+        <scope>provided</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.google.appengine</groupId>
+        <artifactId>appengine-testing</artifactId>
+        <version>1.9.17</version>
+        <scope>test</scope>
+    </dependency>
+
   </dependencies>
-  
+
   <build>
     <plugins>
         <plugin>
